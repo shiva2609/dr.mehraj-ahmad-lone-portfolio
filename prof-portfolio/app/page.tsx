@@ -1,9 +1,8 @@
 "use client";
 
-import PageTransition from "./components/PageTransition";
-import Hero from "./components/Hero";
-import SectionPreview from "./components/SectionPreview";
-import Footer from "./components/Footer";
+import PageTransition from "@/components/PageTransition";
+import Hero from "@/components/Hero";
+import SectionPreview from "@/components/SectionPreview";
 import { motion } from "framer-motion";
 import {
   academicDetails,
@@ -18,7 +17,7 @@ import {
   workshopsAttended,
   collaborators,
   technicalSkills,
-} from "./data/professor";
+} from "@/app/data/professor";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 
@@ -442,8 +441,6 @@ export default function Home() {
             </motion.div>
           </div>
         </section>
-
-        <Footer />
       </main>
     </PageTransition>
   );

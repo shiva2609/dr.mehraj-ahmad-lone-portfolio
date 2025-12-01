@@ -1,9 +1,9 @@
 "use client";
 
-import PageTransition from "../components/PageTransition";
-import PageHeader from "../components/PageHeader";
+import PageTransition from "@/components/PageTransition";
+import PageHeader from "@/components/PageHeader";
 import { motion } from "framer-motion";
-import { fieldsOfInterest } from "../data/professor";
+import { fieldsOfInterest } from "@/app/data/professor";
 
 export default function FieldsOfInterestPage() {
   return (

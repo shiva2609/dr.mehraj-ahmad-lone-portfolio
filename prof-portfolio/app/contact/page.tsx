@@ -1,9 +1,9 @@
 "use client";
 
-import PageTransition from "../components/PageTransition";
-import PageHeader from "../components/PageHeader";
+import PageTransition from "@/components/PageTransition";
+import PageHeader from "@/components/PageHeader";
 import { motion } from "framer-motion";
-import { contactInfo } from "../data/professor";
+import { contactInfo } from "@/app/data/professor";
 import { Mail, Phone, MapPin, Copy, Check } from "lucide-react";
 import { useState } from "react";
 

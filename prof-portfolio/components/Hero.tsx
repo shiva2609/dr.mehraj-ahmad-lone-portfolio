@@ -5,7 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 import { Download, Mail } from "lucide-react";
-import { personalInfo } from "../data/professor";
+import { personalInfo } from "@/app/data/professor";
 
 export default function Hero() {
   const [imageError, setImageError] = useState(false);

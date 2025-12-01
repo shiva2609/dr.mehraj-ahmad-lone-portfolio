@@ -1,9 +1,9 @@
 "use client";
 
-import PageTransition from "../components/PageTransition";
-import PageHeader from "../components/PageHeader";
+import PageTransition from "@/components/PageTransition";
+import PageHeader from "@/components/PageHeader";
 import { motion } from "framer-motion";
-import { researchProjects } from "../data/professor";
+import { researchProjects } from "@/app/data/professor";
 
 const containerVariants = {
   hidden: { opacity: 0 },

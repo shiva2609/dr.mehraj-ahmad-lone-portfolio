@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
 import { EB_Garamond, Inter } from "next/font/google";
 import "./globals.css";
-import Navbar from "./components/Navbar";
-import ConditionalFloatingSymbols from "./components/ConditionalFloatingSymbols";
+import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
+import ConditionalFloatingSymbols from "@/components/ConditionalFloatingSymbols";
 
 const ebGaramond = EB_Garamond({
   subsets: ["latin"],
@@ -40,8 +41,11 @@ export default function RootLayout({
       >
         <ConditionalFloatingSymbols />
         <Navbar />
-        <div className="relative z-10">
-          {children}
+        <div className="relative z-10 min-h-screen flex flex-col">
+          <main className="flex-1">
+            {children}
+          </main>
+          <Footer />
         </div>
       </body>
     </html>

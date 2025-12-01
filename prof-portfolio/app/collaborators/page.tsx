@@ -1,9 +1,9 @@
 "use client";
 
-import PageTransition from "../components/PageTransition";
-import PageHeader from "../components/PageHeader";
+import PageTransition from "@/components/PageTransition";
+import PageHeader from "@/components/PageHeader";
 import { motion } from "framer-motion";
-import { collaborators } from "../data/professor";
+import { collaborators } from "@/app/data/professor";
 import { MapPin } from "lucide-react";
 
 const containerVariants = {

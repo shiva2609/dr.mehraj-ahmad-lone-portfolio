@@ -5,7 +5,7 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { ChevronDown, Menu, X } from "lucide-react";
-import { useScrollSpy } from "../hooks/useScrollSpy";
+import { useScrollSpy } from "@/hooks/useScrollSpy";
 
 // Section IDs for homepage scrollspy (EXACT ORDER)
 const homepageSections = [

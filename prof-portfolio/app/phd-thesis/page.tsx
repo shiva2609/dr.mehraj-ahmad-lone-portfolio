@@ -1,9 +1,9 @@
 "use client";
 
-import PageTransition from "../components/PageTransition";
-import PageHeader from "../components/PageHeader";
+import PageTransition from "@/components/PageTransition";
+import PageHeader from "@/components/PageHeader";
 import { motion } from "framer-motion";
-import { phdThesis } from "../data/professor";
+import { phdThesis } from "@/app/data/professor";
 
 export default function PhDThesisPage() {
   return (

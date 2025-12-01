@@ -1,9 +1,9 @@
 "use client";
 
-import PageTransition from "../components/PageTransition";
-import PageHeader from "../components/PageHeader";
+import PageTransition from "@/components/PageTransition";
+import PageHeader from "@/components/PageHeader";
 import { motion } from "framer-motion";
-import { academicDetails } from "../data/professor";
+import { academicDetails } from "@/app/data/professor";
 
 export default function AcademicDetailsPage() {
   return (

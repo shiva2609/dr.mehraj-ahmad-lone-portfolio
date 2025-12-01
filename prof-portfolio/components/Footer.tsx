@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { contactInfo } from "../data/professor";
+import { contactInfo } from "@/app/data/professor";
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();

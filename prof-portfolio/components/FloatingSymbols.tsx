@@ -41,6 +41,7 @@ export default function FloatingSymbols() {
             top: `${item.y}%`,
             fontSize: `${item.size}px`,
             opacity: 0.04,
+            willChange: "transform",
           }}
           animate={{
             y: [0, -40, 20, -30, 0],
@@ -52,9 +53,6 @@ export default function FloatingSymbols() {
             delay: item.delay,
             repeat: Infinity,
             ease: "easeInOut",
-          }}
-          style={{
-            willChange: "transform",
           }}
         >
           {item.symbol}
