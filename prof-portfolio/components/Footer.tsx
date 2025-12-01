@@ -1,6 +1,5 @@
 "use client";
 
-import Link from "next/link";
 import { contactInfo } from "@/app/data/professor";
 
 export default function Footer() {
