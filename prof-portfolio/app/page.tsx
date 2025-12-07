@@ -17,6 +17,7 @@ import {
   workshopsAttended,
   collaborators,
   technicalSkills,
+  phdStudents,
 } from "@/app/data/professor";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
@@ -287,6 +288,35 @@ export default function Home() {
           />
         </section>
 
+        {/* PhD Students Preview */}
+        <section id="phd-students" className="py-16 md:py-24 px-4 md:px-8 lg:px-16 relative z-10">
+          <SectionPreview
+            title="PhD Students"
+            items={phdStudents.map((student, index) => ({ id: index + 1, ...student }))}
+            limit={3}
+            linkTo="/phd-students"
+            linkText="View Details"
+            renderItem={(item) => (
+            <div className="glass-card p-6 md:p-8">
+              <div className="flex items-center justify-between">
+                <h3 className="font-serif text-xl font-semibold text-foreground">
+                  {item.name}
+                </h3>
+                <span
+                  className={`font-sans text-sm font-medium px-3 py-1 rounded-full ${
+                    item.status === "Completed"
+                      ? "text-green-400 bg-green-400/10 border border-green-400/20"
+                      : "text-foreground/80 bg-foreground/5 border border-foreground/10"
+                  }`}
+                >
+                  {item.status}
+                </span>
+              </div>
+            </div>
+          )}
+          />
+        </section>
+
         {/* Workshops Organised Preview */}
         <section id="workshops-organised" className="py-16 md:py-24 px-4 md:px-8 lg:px-16 relative z-10">
           <SectionPreview
@@ -352,6 +382,8 @@ export default function Home() {
           )}
           />
         </section>
+
+        
 
         {/* Collaborators Preview */}
         <section id="collaborators" className="py-16 md:py-24 px-4 md:px-8 lg:px-16 relative z-10">

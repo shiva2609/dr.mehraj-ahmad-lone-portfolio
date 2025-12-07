@@ -20,6 +20,7 @@ const homepageSections = [
   "publications",
   "workshops-organised",
   "workshops-attended",
+  "phd-students",
   "collaborators",
   "technical-skills",
   "contact",
@@ -33,6 +34,7 @@ const navItems = [
   { label: "Administrative", href: "/administrative-experience", sectionId: "administrative" },
   { label: "Research", href: "/research-projects", sectionId: "research-projects" },
   { label: "Publications", href: "/publications", sectionId: "publications" },
+  { label: "PhD Students", href: "/phd-students", sectionId: "phd-students" },
 ];
 
 const workshopsSubmenu = [
@@ -338,6 +340,16 @@ export default function Navbar() {
                     className="font-sans text-base text-foreground/80"
                   >
                     Workshops Attended
+                  </Link>
+                  <Link
+                    href="/phd-students"
+                    onClick={(e) => {
+                      handleNavClick(e, "/phd-students", "phd-students");
+                      setMobileMenuOpen(false);
+                    }}
+                    className="font-sans text-base text-foreground/80"
+                  >
+                    PhD Students
                   </Link>
                   <Link
                     href="/collaborators"
