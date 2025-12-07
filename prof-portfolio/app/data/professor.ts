@@ -65,6 +65,11 @@ export interface Collaborator {
   country: string;
 }
 
+export interface PhDStudent {
+  name: string;
+  status: "Completed" | "Ongoing";
+}
+
 export interface ContactInfo {
   email: string;
   mobile: string[];
@@ -187,6 +192,11 @@ export const researchProjects: ResearchProject[] = [
     id: 1,
     title: "Towards Prevention of Counterfeiting Saffron Quality by Smart Contract: A Way Forward Through Block Chain",
     description: "Interdisciplinary research project focusing on blockchain technology applications for quality assurance and counterfeiting prevention in saffron trade.",
+  },
+  {
+    id: 2,
+    title: "Minimal surfaces and their construction by different techniques",
+    description: "Study and development of geometric constructions for minimal surfaces using classical and modern differential geometric methods.",
   },
 ];
 
@@ -612,6 +622,15 @@ export const collaborators: Collaborator[] = [
     university: "Michigan State University, East Lansing, Michigan",
     country: "USA",
   },
+];
+
+// PhD Students
+export const phdStudents: PhDStudent[] = [
+  { name: "Towsee Ali Wani", status: "Completed" },
+  { name: "Idrees Fayaz Harry", status: "Completed" },
+  { name: "Prince Majeed", status: "Completed" },
+  { name: "Arshi Yousuf", status: "Ongoing" },
+  { name: "Sadaqat Hussain", status: "Ongoing" },
 ];
 
 // Technical Skills

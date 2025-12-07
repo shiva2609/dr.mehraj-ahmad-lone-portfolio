@@ -9,6 +9,7 @@ interface SectionPreviewProps<T> {
   items: T[];
   limit?: number;
   linkTo: string;
+  linkText?: string;
   renderItem: (item: T, index: number) => React.ReactNode;
   className?: string;
 }
@@ -18,6 +19,7 @@ export default function SectionPreview<T extends { id: number }>({
   items,
   limit = 3,
   linkTo,
+  linkText = "See More",
   renderItem,
   className = "",
 }: SectionPreviewProps<T>) {
@@ -42,7 +44,7 @@ export default function SectionPreview<T extends { id: number }>({
               href={linkTo}
               className="group flex items-center gap-2 text-blue-500 hover:text-blue-400 font-sans text-sm font-medium transition-colors"
             >
-              See More
+              {linkText}
               <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
             </Link>
           )}
