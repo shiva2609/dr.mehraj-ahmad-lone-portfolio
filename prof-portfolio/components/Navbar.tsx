@@ -21,7 +21,6 @@ const homepageSections = [
   "workshops-organised",
   "workshops-attended",
   "phd-students",
-  "collaborators",
   "technical-skills",
   "contact",
 ];
@@ -227,44 +226,6 @@ export default function Navbar() {
                 </AnimatePresence>
               </div>
 
-              <Link
-                href="/collaborators"
-                onClick={(e) => handleNavClick(e, "/collaborators", "collaborators")}
-              >
-                <motion.div
-                  className="relative font-sans text-sm text-foreground/80 hover:text-foreground transition-colors"
-                  initial={{ opacity: 0, y: -20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: (navItems.length + 1) * 0.05 }}
-                >
-                  <span
-                    className={
-                      isActive("/collaborators", "collaborators") ? "text-foreground" : ""
-                    }
-                  >
-                    Collaborators
-                  </span>
-                  {isActive("/collaborators", "collaborators") && (
-                    <motion.span
-                      className="absolute bottom-0 left-0 w-full h-0.5 bg-blue-500"
-                      layoutId="navbar-collaborators-indicator"
-                      transition={{
-                        type: "tween",
-                        ease: "easeInOut",
-                        duration: 0.4,
-                      }}
-                    />
-                  )}
-                  {!isActive("/collaborators", "collaborators") && (
-                    <motion.span
-                      className="absolute bottom-0 left-0 w-0 h-0.5 bg-blue-500"
-                      whileHover={{ width: "100%" }}
-                      transition={{ duration: 0.3, ease: "easeInOut" }}
-                    />
-                  )}
-                </motion.div>
-              </Link>
-
               <Link href="/contact">
                 <motion.button
                   whileHover={{ scale: 1.05 }}
@@ -350,16 +311,6 @@ export default function Navbar() {
                     className="font-sans text-base text-foreground/80"
                   >
                     PhD Students
-                  </Link>
-                  <Link
-                    href="/collaborators"
-                    onClick={(e) => {
-                      handleNavClick(e, "/collaborators", "collaborators");
-                      setMobileMenuOpen(false);
-                    }}
-                    className="font-sans text-base text-foreground/80"
-                  >
-                    Collaborators
                   </Link>
                   <Link
                     href="/contact"

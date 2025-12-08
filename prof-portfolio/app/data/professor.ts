@@ -58,13 +58,6 @@ export interface Workshop {
   paperTitle?: string;
 }
 
-export interface Collaborator {
-  id: number;
-  name: string;
-  university: string;
-  country: string;
-}
-
 export interface PhDStudent {
   name: string;
   status: "Completed" | "Ongoing";
@@ -165,6 +158,13 @@ export const administrativeExperience: AdministrativeExperience[] = [
     location: "J&K, India",
     period: "10-08-2021 - 15-03-2023",
   },
+  {
+    id: 4,
+    position: "MSc Mathematics Course Coordinator",
+    institution: "NIT Srinagar",
+    location: "J&K, India",
+    period: "01-11-2025 - Till Date",
+  },
 ];
 
 // Courses Taught
@@ -172,7 +172,8 @@ export const coursesTaught: Course[] = [
   { id: 1, name: "Operations Research", level: "UG" },
   { id: 2, name: "Matrix Theory", level: "UG" },
   { id: 3, name: "Differential Equations", level: "UG" },
-  { id: 4, name: "Complex Analysis", level: "PG" },
+  { id: 4, name: "Complex Analysis", level: "UG" },
+  { id: 5, name: "Differential Geometry", level: "PG" },
 ];
 
 // PhD Thesis
@@ -182,8 +183,7 @@ export const phdThesis = {
 
 // Fields of Interest
 export const fieldsOfInterest = [
-  "Submanifold theory",
-  "Optimization",
+  "Differential Geometry",
 ];
 
 // Research Projects
@@ -581,46 +581,6 @@ export const workshopsAttended: Workshop[] = [
     title: "International Webinar on Applications of Differential Geometry",
     location: "Maharishi Markandeshwar University, Haryana",
     date: "February 2022",
-  },
-];
-
-// Foreign Collaborators (All 6 from CV)
-export const collaborators: Collaborator[] = [
-  {
-    id: 1,
-    name: "Prof. Y. Matsuyama",
-    university: "Chuo University, Tokyo",
-    country: "Japan",
-  },
-  {
-    id: 2,
-    name: "Prof. G. E. Vilcu",
-    university: "Petroleum-Gas University of Ploieşti, Ploieşti",
-    country: "Romania",
-  },
-  {
-    id: 3,
-    name: "Prof. Falleh R. Al-Solamy",
-    university: "King Abdulaziz University, Jeddah",
-    country: "Saudi Arabia",
-  },
-  {
-    id: 4,
-    name: "Prof. M. N. Boyom",
-    university: "University of Montpellier, Montpellier",
-    country: "France",
-  },
-  {
-    id: 5,
-    name: "Prof. Siraj Uddin",
-    university: "King Abdulaziz University, Jeddah",
-    country: "Saudi Arabia",
-  },
-  {
-    id: 6,
-    name: "Prof. Bang-Yen Chen",
-    university: "Michigan State University, East Lansing, Michigan",
-    country: "USA",
   },
 ];
 
