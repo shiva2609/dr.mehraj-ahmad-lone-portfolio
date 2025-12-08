@@ -31,12 +31,24 @@ const itemVariants = {
 
 export default function ContactPage() {
   const [copied, setCopied] = useState(false);
+  const [copiedAlt, setCopiedAlt] = useState(false);
+  const altEmail = "mehrajlone@nitsri.ac.in";
 
   const copyEmail = async () => {
     try {
       await navigator.clipboard.writeText(contactInfo.email);
       setCopied(true);
       setTimeout(() => setCopied(false), 2000);
+    } catch (err) {
+      console.error("Failed to copy:", err);
+    }
+  };
+
+  const copyAltEmail = async () => {
+    try {
+      await navigator.clipboard.writeText(altEmail);
+      setCopiedAlt(true);
+      setTimeout(() => setCopiedAlt(false), 2000);
     } catch (err) {
       console.error("Failed to copy:", err);
     }
@@ -84,6 +96,41 @@ export default function ContactPage() {
                       aria-label="Copy email"
                     >
                       {copied ? (
+                        <Check className="w-5 h-5 text-green-400" />
+                      ) : (
+                        <Copy className="w-5 h-5 text-foreground/60" />
+                      )}
+                    </motion.button>
+                  </div>
+                </div>
+              </motion.div>
+
+              {/* Additional Email */}
+              <motion.div variants={itemVariants} className="relative">
+                <div className="bg-foreground/10 rounded-2xl p-6 md:p-8 border border-foreground/10">
+                  <div className="flex items-start justify-between gap-4">
+                    <div className="flex items-start gap-4 flex-1">
+                      <Mail className="w-6 h-6 text-foreground/60 mt-1 flex-shrink-0" />
+                      <div className="flex-1">
+                        <label className="font-sans text-sm text-foreground/60 mb-2 block">
+                          Additional Email
+                        </label>
+                        <a
+                          href={`mailto:${altEmail}`}
+                          className="font-sans text-base md:text-lg text-foreground font-medium hover:text-blue-400 transition-colors"
+                        >
+                          {altEmail}
+                        </a>
+                      </div>
+                    </div>
+                    <motion.button
+                      whileHover={{ scale: 1.05 }}
+                      whileTap={{ scale: 0.95 }}
+                      onClick={copyAltEmail}
+                      className="p-2 rounded-lg bg-foreground/10 hover:bg-foreground/20 transition-colors"
+                      aria-label="Copy additional email"
+                    >
+                      {copiedAlt ? (
                         <Check className="w-5 h-5 text-green-400" />
                       ) : (
                         <Copy className="w-5 h-5 text-foreground/60" />

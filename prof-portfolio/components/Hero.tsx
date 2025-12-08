@@ -4,10 +4,11 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
-import { Download, Mail } from "lucide-react";
+import { Eye, Mail } from "lucide-react";
 import { personalInfo } from "@/app/data/professor";
 
 export default function Hero() {
+  const heroEmail = "mehrajlone@nitsri.ac.in";
   const [imageError, setImageError] = useState(false);
 
   return (
@@ -28,7 +29,7 @@ export default function Hero() {
           >
             {!imageError ? (
               <Image
-                src="/profile-photo.jpg"
+                src="/Profile-photo.jpg"
                 alt={personalInfo.name}
                 fill
                 className="object-cover"
@@ -78,10 +79,10 @@ export default function Hero() {
             className="flex flex-col items-center gap-2 mb-12"
           >
             <a
-              href={`mailto:${personalInfo.email}`}
+              href={`mailto:${heroEmail}`}
               className="font-sans text-sm text-foreground/70 hover:text-foreground transition-colors"
             >
-              {personalInfo.email}
+              {heroEmail}
             </a>
             <p className="font-sans text-sm text-foreground/60">
               {personalInfo.mobile[0]}
@@ -95,13 +96,13 @@ export default function Hero() {
             transition={{ duration: 0.8, delay: 0.7 }}
             className="flex flex-wrap items-center justify-center gap-4"
           >
-            <Link href="/cv.pdf" target="_blank" download>
+            <Link href="/Mehraj_CV_1686894031.pdf" target="_blank" rel="noreferrer">
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 className="group inline-flex items-center gap-2 px-6 py-3 bg-foreground/10 hover:bg-foreground/20 text-foreground font-sans text-base font-medium rounded-full transition-all border border-foreground/20"
               >
-                <Download className="w-5 h-5" />
+                <Eye className="w-5 h-5" />
                 View CV
               </motion.button>
             </Link>

@@ -15,7 +15,6 @@ import {
   publications,
   workshopsOrganised,
   workshopsAttended,
-  collaborators,
   technicalSkills,
   phdStudents,
 } from "@/app/data/professor";
@@ -385,28 +384,7 @@ export default function Home() {
 
         
 
-        {/* Collaborators Preview */}
-        <section id="collaborators" className="py-16 md:py-24 px-4 md:px-8 lg:px-16 relative z-10">
-          <SectionPreview
-            title="Foreign Collaborators"
-            items={collaborators}
-            limit={3}
-            linkTo="/collaborators"
-            renderItem={(item) => (
-            <div className="glass-card p-6 md:p-8">
-              <h3 className="font-serif text-xl font-semibold text-foreground mb-2">
-                {item.name}
-              </h3>
-              <p className="font-sans text-base text-foreground/80 mb-1">
-                {item.university}
-              </p>
-              <p className="font-sans text-sm text-foreground/60">
-                {item.country}
-              </p>
-            </div>
-          )}
-          />
-        </section>
+        
 
         {/* Technical Skills - Full */}
         <section id="technical-skills" className="py-16 md:py-24 px-4 md:px-8 lg:px-16 relative z-10">
